@@ -1,0 +1,20 @@
+ {
+    "bones": {
+        "host": "steinskog.me",
+
+        "username": "harepus",
+        "password": "sitronbrus10A'",
+
+        "path": "/public_html/stuff/wp-content/themes/bones", // your project's root path on the _server_
+
+        "upload_on_save": true,
+
+        "tls": false,
+
+        "download_on_open": true,
+
+        "upload_delay": 2,
+
+        "after_save_watch": [["library/css", "style.css"]]
+    }
+}
