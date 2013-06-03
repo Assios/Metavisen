@@ -6,7 +6,7 @@
 							<?php bones_footer_links(); ?>
 									</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> smoog.</p>
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
 				</div> <!-- end #inner-footer -->
 
