@@ -173,6 +173,8 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
+	add_image_size('twopic', 470, 390, true);
+
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
 	    array(
@@ -228,7 +230,7 @@ function bones_main_nav() {
     	'container' => false,                           // remove nav container
     	'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
     	'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    	'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+    	'menu_class' => 'nav top-nav clearfix wrap',         // adding custom nav class
     	'theme_location' => 'main-nav',                 // where it's located in the theme
     	'before' => '',                                 // before the menu
         'after' => '',                                  // after the menu

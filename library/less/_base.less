@@ -38,7 +38,7 @@ html, body {
 	/* height: 100%; */
 }
 body {
-	font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+	font-family: 'Lora', Georgia, serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #000;
@@ -129,9 +129,9 @@ a, a:visited {
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 	text-rendering: optimizelegibility;
-	font-weight: 400;
+	font-weight: 700;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -174,22 +174,27 @@ h5, .h5 {
 06. HEADER STYLES
 *********************/
 
-.header {
-	#inner-header {}
-
 	#logo {
-	margin-top: 10px;
-	width: 512px;
-	height: 129px;
+	width: 100%;
+	height: 200px;
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	background: url('/wp-content/themes/bones/library/images/banner.png') no-repeat;
+	background: url('/wp-content/themes/bones/library/images/banner_bg.png') no-repeat;
+	background-size: cover;
+	}
 
+	#front_logo {
+	width: 500px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	background: url('/wp-content/themes/bones/library/images/banner_hvit.png') no-repeat center;
+	background-size: contain;
 	}
 
 	nav {
+		background-color: @darkblue;
 		ul.nav {
+			margin: 0 auto;
 			li {
 				a {}
 
@@ -199,6 +204,10 @@ h5, .h5 {
 			}
 		}
 	}
+
+.header {
+	#inner-header {}
+
 }
 
 /*********************
@@ -216,7 +225,9 @@ and more scalable.
 .nav {
 	border: 1px solid @darkblue;
 	border-bottom: 0;
-	box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 1.125em;
 
 	li {
 
@@ -299,20 +310,28 @@ and more scalable.
 
 		.hentry {
 
-			header {}
+			header {
+			font-family: 'Open Sans Condensed', sans-serif;
+			}
 
 			footer {}
 
 		} /* end .hentry */
 
 		.single-title,
-		.page-title {}
+		.page-title {
+
+		}
 
 		.single-title {}
 
-		.page-title {}
+		.page-title {
 
-		.archive-title { }
+		}
+
+		.archive-title { 
+
+		}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */

@@ -21,6 +21,8 @@
 		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -40,24 +42,8 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
-		<div id="container">
-
-			<header class="header" role="banner">
-
-				<div id="inner-header" class="wrap clearfix">
-
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<div id="logo"></div>
-
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-
-				</div> <!-- end #inner-header -->
-
-			</header> <!-- end header -->
+			<div id="container">
+					<div id="logo"><div id="front_logo"></div></div>
+						<nav role="navigation">
+							<?php bones_main_nav(); ?>
+						</nav>
