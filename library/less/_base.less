@@ -42,7 +42,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #000;
-	background-color: @metawhite;
+	background-color: #dddddb;
 }
 
 /********************
@@ -192,8 +192,25 @@ h5, .h5 {
 	}
 
 	nav {
+
+		li:last-child::after {
+		content: "";
+		border-left: 1px solid #303137;
+		position: absolute;
+		height: 100%;
+		right: -2px;
+		top: 0;
+		}
+
+		li {
+			border-right: 1px solid #44474F;
+			border-left: 1px solid #303137;
+		}
+
+
 		background-color: @darkblue;
 		ul.nav {
+			border-left: 1px solid #444A4F;
 			margin: 0 auto;
 			li {
 				a {}
@@ -204,6 +221,50 @@ h5, .h5 {
 			}
 		}
 	}
+
+.article-header {
+	position: relative;
+	background-color: #fff;
+	img {
+		width: 100%;
+		display: block;
+	}
+	.h2 {
+		margin-top: 0;
+		background: @darkblue;
+		text-align: center;
+		padding: .2em;
+		a {
+		color: white;
+		text-align: center;
+		}
+	}
+}
+
+.cattag::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 5px solid #1d2126;
+	bottom: -5px;
+	left: 0px;
+	border-bottom: 5px solid transparent;
+}
+
+.cattag {
+	color: #999;
+	position: absolute;
+	background: #1d2126;
+	padding: .5em;
+	left: -5px;
+	height: 40px;
+	a {
+		color: white;
+	}
+}
+
+
 
 .header {
 	#inner-header {}
@@ -348,6 +409,13 @@ and more scalable.
 			color: #999;
 
 			time {}
+		}
+
+		/* entry ingress */
+		.entry-ingress {
+		font-size: 1.1em;
+		margin: 0;
+		padding: 0.5em;
 		}
 
 		/* entry content */

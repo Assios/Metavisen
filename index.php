@@ -4,24 +4,24 @@
 				
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="twelvecol first clearfix" role="main">
+							<?php $style = array('onepic' => ' twelvecol', 'twopic' => ' sixcol'); $counter = 0; if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php $stuff = 'clearfix'; $stuff .= $style[get_field('post_type')]; if ($counter % 2 ? $stuff .= ' last' : $stuff .= ' first'); post_class($stuff); ?> role="article">
 
 								<header class="article-header">
-
-									<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-									<p class="byline vcard"><?php
+									<p class="cattag byline vcard"><?php
 										printf(__('%4$s', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
-									?><?php the_post_thumbnail( 'twopic' ); ?></p>
+									?></p>
+									<?php the_post_thumbnail( get_field('post_type') ); ?>
+									<h1 class="h2">
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+								<section class="entry-ingress clearfix">
+									<?php the_excerpt(); ?>
+									<a href="<?php the_permalink() ?>" style="text-decoration: none;">Les mer...</a>
+									<p>HER ER DET JÆVLIG STORT TOMROM I ALLE RETNINGER DENNE HVITE BOKSEN MÅ MINSKES</p>
+								</section>
 
 								</header> <!-- end article header -->
-
-								<section class="entry-content clearfix">
-									<?php the_excerpt(); ?>
-								</section> <!-- end article section -->
 
 								<footer class="article-footer">
 									<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
@@ -32,7 +32,7 @@
 
 							</article> <!-- end article -->
 
-							<?php endwhile; ?>
+							<?php $counter++; endwhile; ?>
 
 									<?php if (function_exists('bones_page_navi')) { ?>
 											<?php bones_page_navi(); ?>
@@ -46,7 +46,6 @@
 									<?php } ?>
 
 							<?php else : ?>
-
 									<article id="post-not-found" class="hentry clearfix">
 											<header class="article-header">
 												<h1><?php _e("Her erre tomt, gitt!", "bonestheme"); ?></h1>
@@ -60,8 +59,6 @@
 									</article>
 
 							<?php endif; ?>
-
-						</div> <!-- end #main -->
 
 						
 				</div> <!-- end #inner-content -->

@@ -16,7 +16,7 @@
 
 							<section class="entry-content">
 
-								<p><?php _e("Fant ikke artikkern, ass!", "bonestheme"); ?></p>
+								<p><?php _e("Fant ikke siden, ass!", "bonestheme"); ?></p>
 
 							</section> <!-- end article section -->
 
@@ -28,7 +28,7 @@
 
 							<footer class="article-footer">
 
-									<p><?php _e("This is the FOOTER.", "bonestheme"); ?></p>
+									<p><?php _e("", "bonestheme"); ?></p>
 
 							</footer> <!-- end article footer -->
 

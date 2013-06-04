@@ -6,7 +6,7 @@ any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/bones/
+URL: http://themble.cthe_excerpt()om/bones/
 */
 
 /*********************
@@ -173,7 +173,9 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
-	add_image_size('twopic', 470, 390, true);
+	add_image_size('twopic', 570, 300, true);
+
+	add_image_size('onepic', 1140, 400, true);
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

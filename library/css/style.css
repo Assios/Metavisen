@@ -781,7 +781,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #000;
-  background-color: #fffdf6;
+  background-color: #dddddb;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -942,8 +942,60 @@ h5,
 nav {
   background-color: #36383d;
 }
+nav li:last-child::after {
+  content: "";
+  border-left: 1px solid #303137;
+  position: absolute;
+  height: 100%;
+  right: -2px;
+  top: 0;
+}
+nav li {
+  border-right: 1px solid #44474F;
+  border-left: 1px solid #303137;
+}
 nav ul.nav {
+  border-left: 1px solid #444A4F;
   margin: 0 auto;
+}
+.article-header {
+  position: relative;
+  background-color: #fff;
+}
+.article-header img {
+  width: 100%;
+  display: block;
+}
+.article-header .h2 {
+  margin-top: 0;
+  background: #36383d;
+  text-align: center;
+  padding: .2em;
+}
+.article-header .h2 a {
+  color: white;
+  text-align: center;
+}
+.cattag::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 5px solid #1d2126;
+  bottom: -5px;
+  left: 0px;
+  border-bottom: 5px solid transparent;
+}
+.cattag {
+  color: #999;
+  position: absolute;
+  background: #1d2126;
+  padding: .5em;
+  left: -5px;
+  height: 40px;
+}
+.cattag a {
+  color: white;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -1020,6 +1072,12 @@ and more scalable.
 /* post meta */
 .byline {
   color: #999;
+}
+/* entry ingress */
+.entry-ingress {
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0.5em;
 }
 /* entry content */
 .entry-content {
