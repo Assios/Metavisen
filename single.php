@@ -11,11 +11,15 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
-
-									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
-									?></p>
+									<?php the_post_thumbnail( 'article' ); ?>
+									<h1 class="arty entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+									<p class="byline vcard">
+										<section class="article-ingress clearfix">
+									<?php the_excerpt(); ?>
+								</section>
+										<div class="linje"><?php
+										printf(__('<span class="author">%3$s</span> skrev dette med et tastatur <time class="updated" datetime="%1$s" pubdate>%2$s</time> ', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
+									?></p></div>
 
 								</header> <!-- end article header -->
 

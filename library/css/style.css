@@ -781,7 +781,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #000;
-  background-color: #dddddb;
+  background-color: #fffdf6;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -901,6 +901,8 @@ h1,
 }
 h2,
 .h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #000;
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
@@ -960,28 +962,47 @@ nav ul.nav {
 }
 .article-header {
   position: relative;
-  background-color: #fff;
 }
 .article-header img {
   width: 100%;
   display: block;
 }
-.article-header .h2 {
-  margin-top: 0;
-  background: #36383d;
+.article-header .entry-ingress {
+  margin-top: -50px;
+}
+.article-header .arty {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+}
+.article-header .h1 {
+  font-family: 'Oswald', sans-serif;
+  margin-top: -0.8em;
   text-align: center;
   padding: .2em;
 }
-.article-header .h2 a {
-  color: white;
+.article-header .h1 a {
+  color: #FFF;
   text-align: center;
+  background: #36383d;
+  padding: .1em .2em;
+}
+.article-ingress {
+  margin-top: -40px;
+  font-size: 22px;
+}
+.article-ingress .linje {
+  border-bottom: 2px solid #d5d5d5;
+}
+.archive-ingress {
+  font-size: 12px;
+  max-width: 320px;
 }
 .cattag::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  border-right: 5px solid #1d2126;
+  border-right: 5px solid #36383d;
   bottom: -5px;
   left: 0px;
   border-bottom: 5px solid transparent;
@@ -989,7 +1010,7 @@ nav ul.nav {
 .cattag {
   color: #999;
   position: absolute;
-  background: #1d2126;
+  background: #36383d;
   padding: .5em;
   left: -5px;
   height: 40px;

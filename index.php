@@ -12,13 +12,11 @@
 									<p class="cattag byline vcard"><?php
 										printf(__('%4$s', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
 									?></p>
-									<?php the_post_thumbnail( get_field('post_type') ); ?>
-									<h1 class="h2">
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( get_field('post_type') ); ?>
+									<h1 class="h1">
+									<?php the_title(); ?></a></h1>
 								<section class="entry-ingress clearfix">
 									<?php the_excerpt(); ?>
-									<a href="<?php the_permalink() ?>" style="text-decoration: none;">Les mer...</a>
-									<p>HER ER DET JÆVLIG STORT TOMROM I ALLE RETNINGER DENNE HVITE BOKSEN MÅ MINSKES</p>
 								</section>
 
 								</header> <!-- end article header -->

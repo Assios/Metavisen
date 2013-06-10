@@ -16,7 +16,11 @@
 
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php wp_footer(); ?>
-
+		<?php
+		if ( function_exists( 'yoast_analytics' ) ) {
+		  yoast_analytics();
+		}
+		?>
 	</body>
 
 </html> <!-- end page. what a ride! -->

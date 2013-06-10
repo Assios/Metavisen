@@ -173,9 +173,11 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
-	add_image_size('twopic', 570, 300, true);
+	add_image_size('twopic', 570, 250, true);
 
 	add_image_size('onepic', 1140, 400, true);
+
+	add_image_size('article', 800, 350, true);
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

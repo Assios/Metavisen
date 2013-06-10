@@ -42,7 +42,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #000;
-	background-color: #dddddb;
+	background-color: @metawhite;
 }
 
 /********************
@@ -149,6 +149,8 @@ h1, .h1 {
 }
 
 h2, .h2 {
+	font-family: 'Oswald', sans-serif;
+	color: #000;
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
@@ -223,22 +225,47 @@ h5, .h5 {
 	}
 
 .article-header {
+	a:hover {
+				
+			}
 	position: relative;
-	background-color: #fff;
 	img {
 		width: 100%;
 		display: block;
 	}
-	.h2 {
-		margin-top: 0;
-		background: @darkblue;
+	.entry-ingress {
+	margin-top: -50px;
+	}
+	.arty {
+		font-family: 'Oswald', sans-serif;
+		font-size: 3em;
+	}
+	.h1 {
+		font-family: 'Oswald', sans-serif;
+		margin-top: -.8em;
 		text-align: center;
 		padding: .2em;
 		a {
-		color: white;
-		text-align: center;
+			color: #FFF;
+
+			text-align: center;
+			background: @darkblue;
+			padding: .1em .2em;
 		}
 	}
+}
+
+.article-ingress {
+	margin-top: -40px;
+	font-size: 22px;
+	.linje {
+		border-bottom:2px solid #d5d5d5;
+	}
+}
+
+.archive-ingress {
+	font-size: 12px;
+	max-width: 320px;
 }
 
 .cattag::before {
@@ -246,7 +273,7 @@ h5, .h5 {
 	position: absolute;
 	width: 0;
 	height: 0;
-	border-right: 5px solid #1d2126;
+	border-right: 5px solid @darkblue;
 	bottom: -5px;
 	left: 0px;
 	border-bottom: 5px solid transparent;
@@ -255,7 +282,7 @@ h5, .h5 {
 .cattag {
 	color: #999;
 	position: absolute;
-	background: #1d2126;
+	background: @darkblue;
 	padding: .5em;
 	left: -5px;
 	height: 40px;
